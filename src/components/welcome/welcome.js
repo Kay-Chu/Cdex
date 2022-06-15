@@ -1,7 +1,8 @@
 // import '../../style/modules/welcome.css';
 import React from "react";
-import { Typography , Grid, Box} from '@mui/material';
+import { Typography , Button, Box} from '@mui/material';
 import loading from '../../images/loading.gif'
+import { Link } from "react-router-dom";
 
 const Welcome = () => {
     return (
@@ -33,6 +34,15 @@ const Welcome = () => {
                     alignItems="center"
                 >
                     <img src={ loading } alt="loading" className="loading-gif" width="100px" height="100px"/>
+                </Box>
+                <Box
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    <Link to="/Home" style={{ textDecoration: 'none' }}>
+                        <Button className="enter-btn" variant="outlined">Enter</Button>
+                    </Link>
                 </Box>
             </div>
         </div>
