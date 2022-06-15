@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "mappings": "AQAA,AACI,QADI,CACJ,aAAa,CAAC;EACV,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,KAAK;CAAG;;AAHvB,AAII,QAJI,CAIJ,YAAY,CAAC;EACT,MAAM,EAAE,YAAY,CAAC,SAAS,CAAC,cAAc,CAAC,kBAAkB,CAAC,gBAAgB,CAAC,cAAc;CAAG",
+    "sources": [
+        "style.sass",
+        "_variables.sass",
+        "base/_base-dir.sass",
+        "base/_base.sass",
+        "layouts/_layouts-dir.sass",
+        "layouts/_header.sass",
+        "layouts/_footer.sass",
+        "modules/_modules-dir.sass",
+        "modules/_welcome.sass"
+    ],
+    "names": [],
+    "file": "style.css"
+}
