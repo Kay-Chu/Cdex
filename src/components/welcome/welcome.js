@@ -1,13 +1,13 @@
-import '../../style/modules/welcome.css'
+// import '../../style/modules/welcome.css';
 import React from "react";
-import { Typography , Grid} from '@mui/material';
+import { Typography , Grid, Box} from '@mui/material';
 import loading from '../../images/loading.gif'
 
 const Welcome = () => {
     return (
         
         <div className="welcome">
-            <Grid container spacing={2}>
+            {/* <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <Typography align="center" className="welcome-text" >Welcome!</Typography>
                 </Grid>
@@ -18,7 +18,23 @@ const Welcome = () => {
                 </Grid>
                 <Grid item xs={5.5}>
                 </Grid>
-            </Grid>
+            </Grid> */}
+            <div className="content">
+                <Box
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    <Typography align="center" className="welcome-text" >Welcome!</Typography>
+                </Box>
+                <Box
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    <img src={ loading } alt="loading" className="loading-gif" width="100px" height="100px"/>
+                </Box>
+            </div>
         </div>
     );
 };
