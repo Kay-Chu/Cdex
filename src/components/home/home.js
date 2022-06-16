@@ -1,9 +1,13 @@
 import React from "react";
+import ProgressBar from "./progress";
 
 const Home = () => {
+
+    const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+
     return (
         <>
-            <h1>Home</h1>
+            <ProgressBar steps={steps} />
         </>
     );
 };
