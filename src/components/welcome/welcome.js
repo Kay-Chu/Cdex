@@ -1,7 +1,7 @@
 // import '../../style/modules/welcome.css';
 import React from "react";
 import { Typography , Button, Box} from '@mui/material';
-import loading from '../../images/loading.gif'
+import loading from '../../images/loading.gif';
 import { Link } from "react-router-dom";
 
 const Welcome = () => {
