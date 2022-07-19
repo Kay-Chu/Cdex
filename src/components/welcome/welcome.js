@@ -4,29 +4,22 @@ import { Typography , Button, Box} from '@mui/material';
 import loading from '../../images/loading.gif';
 import { Link } from "react-router-dom";
 
+
 const Welcome = () => {
     return (
         
         <div className="welcome">
-            {/* <Grid container spacing={2}>
-                <Grid item xs={12}>
-                    <Typography align="center" className="welcome-text" >Welcome!</Typography>
-                </Grid>
-                <Grid item xs={5.5}>
-                </Grid>
-                <Grid item xs={1}>
-                    <img src={ loading } alt="loading" className="loading-gif" width="100px" height="100px"/>
-                </Grid>
-                <Grid item xs={5.5}>
-                </Grid>
-            </Grid> */}
+            <div className="stars"></div>
+            <div className="stars2"></div>
+            <div className="stars3"></div>
             <div className="content">
+                
                 <Box
                     display="flex"
                     justifyContent="center"
                     alignItems="center"
                 >
-                    <Typography align="center" className="welcome-text" >Welcome!</Typography>
+                    <Typography align="center" className="welcome-text" ><span>WELCOME</span></Typography>
                 </Box>
                 <Box
                     display="flex"
@@ -41,7 +34,7 @@ const Welcome = () => {
                     alignItems="center"
                 >
                     <Link to="/Home" style={{ textDecoration: 'none' }}>
-                        <Button className="enter-btn" variant="outlined">Enter</Button>
+                        <Button className="enter-btn" variant="outlined"><span>Enter</span></Button>
                     </Link>
                 </Box>
             </div>
