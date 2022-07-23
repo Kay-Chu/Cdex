@@ -61,7 +61,7 @@ export default function ProgressBar({steps}) {
       <Stepper nonLinear activeStep={activeStep}>
         {steps.map((label, index) => (
           <Step key={index} completed={completed[index]}>
-            <StepButton color="inherit" onClick={handleStep(index)}>
+            <StepButton className="step-btn" color="grey" onClick={handleStep(index)}>
               
             </StepButton>
           </Step>
@@ -75,7 +75,7 @@ export default function ProgressBar({steps}) {
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Box sx={{ flex: '1 1 auto' }} />
-              <Button onClick={handleReset}>Read Again</Button>
+              <Button className="repeat-btn" onClick={handleReset}>Read Again</Button>
             </Box>
           </React.Fragment>
         ) : (
@@ -83,6 +83,7 @@ export default function ProgressBar({steps}) {
             <Typography sx={{ mt: 2, mb: 1 }}>Page {activeStep + 1}</Typography>
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Button
+                className="previous-btn"
                 color="inherit"
                 disabled={activeStep === 0}
                 onClick={handleBack}
@@ -93,7 +94,7 @@ export default function ProgressBar({steps}) {
               <Box sx={{ flex: '1 1 auto' }} />
               {activeStep !== steps.length &&
                 (completed[activeStep] ? (
-                    <Button onClick={handleNext}>
+                    <Button className="next-btn" onClick={handleNext}>
                         Next
                     </Button>
                 ) : (
