@@ -2,19 +2,49 @@ import React from "react";
 import ProgressBar from "./progress";
 import { Card } from "./card";
 import { Grid } from '@mui/material';
+import square from '../../images/square.png';
 
 const Home = () => {
 
     const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad','','',''];
 
+    const cards = [{
+        "title": "Card 1",
+        "description": "This is a card",
+        "image": square
+    },{
+        "title": "Card 2",
+        "description": "This is a card",
+        "image": square
+    },{
+        "title": "Card 3",
+        "description": "This is a card",
+        "image": square
+    },{
+        "title": "Card 4",
+        "description": "This is a card",
+        "image": square
+    },{
+        "title": "Card 5",
+        "description": "This is a card",
+        "image": square
+    },{
+        "title": "Card 6",
+        "description": "This is a card",
+        "image": square
+    }]
+
+    const [activeStep, setActiveStep] = React.useState(0);
     return (
         <div className="home">
         <Grid container spacing={2}>
             <Grid item xs={12} md={12}>
-                <Card />
+                {
+                    <Card title={cards[activeStep].title} description={cards[activeStep].description} image={cards[activeStep].image} />
+                }
             </Grid>
             <Grid item xs={12} md={12}>
-                <ProgressBar steps={steps} />
+                <ProgressBar steps={steps} activeStep={activeStep} setActiveStep={setActiveStep} />
             </Grid>
         </Grid>
         </div>

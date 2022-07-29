@@ -6,8 +6,7 @@ import StepButton from '@mui/material/StepButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function ProgressBar({steps}) {
-  const [activeStep, setActiveStep] = React.useState(0);
+export default function ProgressBar({steps,activeStep,setActiveStep}) {
   const [completed, setCompleted] = React.useState({});
 
   const totalSteps = () => {

@@ -1,18 +1,17 @@
 import React from "react";
-import square from '../../images/square.png';
 
-const Card = () => {
+const Card = ({title, description, image}) => {
 
     return (
         <>
             <div className="container_card">
                 <div className="card">
                     <div className="imgBx">
-                        <img src={square} alt=""/>
+                        <img src={image} alt=""/>
                     </div>
                     <div className="content">
-                        <h2>Card One</h2>
-                        <p>This is a card.</p>
+                        <h2>{title}</h2>
+                        <p>{description}</p>
                     </div>
                 </div>
                 
