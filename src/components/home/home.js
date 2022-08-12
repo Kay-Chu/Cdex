@@ -40,7 +40,7 @@ const Home = () => {
         <Grid container spacing={2}>
             <Grid item xs={12} md={12}>
                 {
-                    <Card title={cards[activeStep].title} description={cards[activeStep].description} image={cards[activeStep].image} />
+                    activeStep < steps.length ? <Card title={cards[activeStep].title} description={cards[activeStep].description} image={cards[activeStep].image} /> : <Card title={"Completed!"} description={"You have completed all steps!"} image={square} />
                 }
             </Grid>
             <Grid item xs={12} md={12}>
