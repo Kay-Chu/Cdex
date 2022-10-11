@@ -1,6 +1,7 @@
 import React from "react";
 import ProgressBar from "./progress";
 import { Card } from "./card";
+import { Content } from "./content";
 import { Grid } from '@mui/material';
 import square from '../../images/square.png';
 
@@ -34,13 +35,42 @@ const Home = () => {
         "image": square
     }]
 
+    const content = [{
+        "title": "Title 1",
+        "description": "Move your mouse to the picture and read the description."
+    },{
+        "title": "Title 2",
+        "description": "Move your mouse to the picture and read the description."
+    },{
+        "title": "Title 3",
+        "description": "Move your mouse to the picture and read the description."
+    },{
+        "title": "Title 4",
+        "description": "Move your mouse to the picture and read the description."
+    },{
+        "title": "Title 5",
+        "description": "Move your mouse to the picture and read the description."
+    },{
+        "title": "Title 6",
+        "description": "Move your mouse to the picture and read the description."
+    }]
+
     const [activeStep, setActiveStep] = React.useState(0);
     return (
         <div className="home">
         <Grid container spacing={2}>
             <Grid item xs={12} md={12}>
                 {
-                    activeStep < steps.length ? <Card title={cards[activeStep].title} description={cards[activeStep].description} image={cards[activeStep].image} /> : <Card title={"Completed!"} description={"You have completed all steps!"} image={square} />
+                    activeStep < steps.length 
+                    ? 
+                    <>
+                        <Card title={cards[activeStep].title} description={cards[activeStep].description} image={cards[activeStep].image} />
+                        <Content title={content[activeStep].title} description={content[activeStep].description}/>
+                    </>
+                    : 
+                    
+                    <Card title={"Completed!"} description={"You have completed all steps!"} image={square} />
+                    
                 }
             </Grid>
             <Grid item xs={12} md={12}>
