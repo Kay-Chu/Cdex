@@ -58,7 +58,13 @@ const Home = () => {
     const [activeStep, setActiveStep] = React.useState(0);
     return (
         <div className="home">
+
+        
+
         <Grid container spacing={2}>
+            <Grid item xs={12} md={12}>
+                <h1>Create a Character</h1>
+            </Grid>
             <Grid item xs={12} md={12}>
                 {
                     activeStep < steps.length 
