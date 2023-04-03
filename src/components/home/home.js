@@ -113,7 +113,7 @@ const Home = () => {
 
             <div className="movie">
                 {/* <ImageList sx={{ overflowX: 'auto', width: 500, height: 340 }} > */}
-                    <Stack sx={{ overflowX: 'auto', width: '70vw', height: 340 }} direction="row" spacing={2}>
+                    <Stack sx={{ overflowX: 'auto', overflowY: 'hidden', width: '70vw', height: 340 }} direction="row" spacing={2}>
                         {movies.map((movie)=>(<Tile movie={movie} />))}
                     </Stack>
                 {/* </ImageList> */}
